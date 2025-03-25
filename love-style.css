@@ -1,0 +1,73 @@
+/* General resets and font settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ff99cc, #ff66b2); /* Soft pink gradient background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeBackground 3s ease-in-out infinite alternate;
+}
+
+/* Heart container */
+.heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+}
+
+/* Broken heart style */
+.broken-heart {
+    animation: shakeBrokenHeart 1s ease-in-out infinite;
+}
+
+/* Repaired heart */
+.repaired-heart {
+    display: none;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Love message */
+.message-container {
+    margin-top: 30px;
+    font-size: 2em;
+    text-align: center;
+    color: #ff66b2;
+}
+
+/* Background gradient animation */
+@keyframes fadeBackground {
+    0% {
+        background: linear-gradient(135deg, #ff99cc, #ff66b2);
+    }
+    100% {
+        background: linear-gradient(135deg, #ff66b2, #ff99cc);
+    }
+}
+
+/* Animation for broken heart shaking */
+@keyframes shakeBrokenHeart {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

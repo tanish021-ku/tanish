@@ -1,0 +1,137 @@
+/* General resets and font settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ff99cc, #ff66b2); /* Soft pink gradient background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeBackground 3s ease-in-out infinite alternate;
+}
+
+/* Wrapper to center content */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* Box for the apology content */
+.sorry-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    animation: popIn 2s ease-in-out;
+}
+
+/* Apology text with emotional styling */
+.apology-text {
+    font-size: 3em;
+    color: #e6007d; /* Emotional pink */
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: slideInFromTop 2s ease-out;
+}
+
+/* The main apology message */
+.apology-message {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+/* Heart button with animations */
+.heart-btn {
+    background: #e6007d;
+    color: white;
+    padding: 16px 30px;
+    font-size: 1.3em;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.heart-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(230, 0, 125, 0.7); /* Heart glow effect */
+}
+
+.heart-btn span {
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+
+/* Background gradient animation */
+@keyframes fadeBackground {
+    0% {
+        background: linear-gradient(135deg, #ff99cc, #ff66b2);
+    }
+    100% {
+        background: linear-gradient(135deg, #ff66b2, #ff99cc);
+    }
+}
+
+/* Text animation for sliding in from the top */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Text glowing effect for emotional impact */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff66b2, 0 0 30px #ff66b2;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff66b2, 0 0 40px #ff66b2, 0 0 60px #ff66b2;
+    }
+}
+
+/* Animation for heart button pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Box pop-in effect */
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
